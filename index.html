@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Big/Small Lottery Dapp</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Big/Small Lottery Dapp</h1>
+        <p class="status">Status: <span id="status">Not Connected</span></p>
+
+        <div class="section">
+            <h2>Contract Info</h2>
+            <p><strong>Contract Address:</strong> <span id="contractAddress"></span></p>
+            <p><strong>Current Round:</strong> <span id="currentRoundId"></span></p>
+        </div>
+
+        <div class="section">
+            <h2>Place Your Bet</h2>
+            <div class="bet-input">
+                <label for="betAmount">Amount (in TPL):</label>
+                <input type="number" id="betAmount" value="0.1" step="0.1">
+            </div>
+            <div class="button-group">
+                <button id="betBigBtn">Bet Big</button>
+                <button id="betSmallBtn">Bet Small</button>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Draw and Claim</h2>
+            <button id="drawBtn">Draw Lottery</button>
+            <button id="claimBtn">Claim Prize</button>
+            <button id="startNewRoundBtn">Start New Round</button>
+        </div>
+        
+        <div class="section">
+            <h2>Results</h2>
+            <p id="resultMessage"></p>
+        </div>
+    </div>
+    <script src="https://cdn.ethers.io/lib/ethers-5.2.umd.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
